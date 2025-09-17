@@ -12,8 +12,7 @@ SHELL = sh
 
 UNAME_S = $(shell uname -s)
 ifeq ($(UNAME_S),Linux)
-prefix      ?= "$${XDG_DATA_HOME:-$${HOME}/.local}"
-datarootdir ?= $(prefix)/share
+datarootdir ?= "$${XDG_DATA_HOME:-$${HOME}/.local/share}"
 else
 datarootdir ?= "$${HOME}/Library/Application Support"
 endif
