@@ -4,9 +4,7 @@ SPDX-FileCopyrightText: 2025 Chen Linxuan <me@black-desk.cn>
 SPDX-License-Identifier: MIT
 -->
 
-<!-- TODO: Update project name -->
-
-# Template
+# tdoc
 
 [![checks][badge-shields-io-checks]][actions]
 [![commit activity][badge-shields-io-commit-activity]][commits]
@@ -15,52 +13,32 @@ SPDX-License-Identifier: MIT
 ![commits since release][badge-shields-io-commits-since-release]
 [![codecov][badge-shields-io-codecov]][codecov]
 
-<!-- TODO: Update project links -->
-
 [badge-shields-io-checks]:
-  https://img.shields.io/github/check-runs/black-desk/template/master
+  https://img.shields.io/github/check-runs/black-desk/tdoc/master
 
-<!-- TODO: Update project links -->
-
-[actions]: https://github.com/black-desk/template/actions
-
-<!-- TODO: Update project links -->
+[actions]: https://github.com/black-desk/tdoc/actions
 
 [badge-shields-io-commit-activity]:
-  https://img.shields.io/github/commit-activity/w/black-desk/template/master
+  https://img.shields.io/github/commit-activity/w/black-desk/tdoc/master
 
-<!-- TODO: Update project links -->
-
-[commits]: https://github.com/black-desk/template/commits/master
-
-<!-- TODO: Update project links -->
+[commits]: https://github.com/black-desk/tdoc/commits/master
 
 [badge-shields-io-contributors]:
-  https://img.shields.io/github/contributors/black-desk/template
+  https://img.shields.io/github/contributors/black-desk/tdoc
 
-<!-- TODO: Update project links -->
-
-[contributors]: https://github.com/black-desk/template/graphs/contributors
-
-<!-- TODO: Update project links -->
+[contributors]: https://github.com/black-desk/tdoc/graphs/contributors
 
 [badge-shields-io-release-date]:
-  https://img.shields.io/github/release-date/black-desk/template
+  https://img.shields.io/github/release-date/black-desk/tdoc
 
-<!-- TODO: Update project links -->
-
-[releases]: https://github.com/black-desk/template/releases
-
-<!-- TODO: Update project links -->
+[releases]: https://github.com/black-desk/tdoc/releases
 
 [badge-shields-io-commits-since-release]:
-  https://img.shields.io/github/commits-since/black-desk/template/latest
-
-<!-- TODO: Update project links -->
+  https://img.shields.io/github/commits-since/black-desk/tdoc/latest
 
 [badge-shields-io-codecov]:
-  https://codecov.io/github/black-desk/template/graph/badge.svg?token=6TSVGQ4L9X
-[codecov]: https://codecov.io/github/black-desk/template
+  https://codecov.io/github/black-desk/tdoc/graph/badge.svg?token=6TSVGQ4L9X
+[codecov]: https://codecov.io/github/black-desk/tdoc
 
 en | [zh_CN](README.zh_CN.md)
 
@@ -69,34 +47,24 @@ en | [zh_CN](README.zh_CN.md)
 > This English README is translated from the Chinese version using LLM and may
 > contain errors.
 
-<!-- TODO: Add project description -->
-
-My personal project template
+My personal Typst document template.
 
 ## Usage
 
-<!-- TODO: Add project usage instructions -->
+```bash
+git clone https://github.com/black-desk/tdoc.git
+cd tdoc
+make install
+```
 
-1. Use gh to create a repository from the template:
-
-   ```bash
-   gh repo create --public --template black-desk/template
-   ```
-
-2. Edit project files, fill in content, and remove all `TODO` comments.
-
-3. Run the check script to ensure all `TODO` comments have been removed:
-
-   ```bash
-   ./scripts/ls-todo.sh
-   ```
+```bash
+typst init '@local/tdoc:0.1.0' my_doc
+```
 
 ## License
 
-Unless otherwise specified, the code of this project are open source under the
-GNU General Public License version 3 or any later version, while documentation,
-configuration files, and scripts used in the development and maintenance process
-are open source under the MIT License.
+Unless otherwise specified,
+the code of this project is open source under the MIT License.
 
 This project complies with the [REUSE specification].
 

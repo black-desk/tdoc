@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2025 Chen Linxuan <me@black-desk.cn>
+#
+# SPDX-License-Identifier: MIT
+
+[package]
+name =  "tdoc"
+entrypoint = "lib.typ"
+version = "0.1.0"
+authors = [ "Chen Linxuan <me@black-desk.cn>"]
+license = "MIT"
+categories = ["book"]
+description = "自用Typst模板"
+
+[template]
+path = "template"
+entrypoint = "index.typ"
+thumbnail = "thumbnail.png"
