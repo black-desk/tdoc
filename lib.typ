@@ -58,6 +58,8 @@
   show quote: set pad(left: 2em)
   show quote: set text(font: "LXGW WenKai")
 
+  show link: it => { underline(it) }
+
   set text(font: "Noto Serif CJK SC")
 
   align(
