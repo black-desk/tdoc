@@ -31,4 +31,6 @@ install-data:
 	$(INSTALL) -d $(tdocdir)/template
 	$(INSTALL_DATA) ./typst.toml $(tdocdir)/typst.toml
 	$(INSTALL_DATA) ./lib.typ $(tdocdir)/lib.typ
+	$(INSTALL_DATA) ./template/Makefile $(tdocdir)/template/Makefile
+	$(INSTALL_DATA) ./template/.gitignore $(tdocdir)/template/.gitignore
 	$(INSTALL_DATA) ./template/index.typ $(tdocdir)/template/index.typ
