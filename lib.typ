@@ -95,11 +95,6 @@
   abstract
 
   line(length: 100%)
-
-  [
-    #set heading(numbering: none, outlined: false)
-    = 目录
-  ]
   outline(title: none)
   line(length: 100%)
 
