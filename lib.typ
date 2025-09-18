@@ -49,6 +49,14 @@
     )
   )
 
+  set quote(
+    block: true,
+    quotes: false,
+  )
+
+  show quote: set pad(left: 2em)
+  show quote: set text(font: "LXGW WenKai")
+
   set text(font: "Noto Serif CJK SC")
 
   align(
