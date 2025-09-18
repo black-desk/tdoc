@@ -22,7 +22,14 @@ all:
 	@echo Nothin to do
 
 .PHONY: install
-install: install-data
+install: checks install-data
+
+.PHONY: checks
+checks: check-fonts
+
+.PHONY: check-fonts
+check-fonts:
+	./scripts/check-fonts.sh
 
 tdocdir = $(DESTDIR)$(datarootdir)/typst/packages/local/tdoc/$(VERSION)
 
