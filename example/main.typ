@@ -19,25 +19,17 @@
   abstract: include "abstract.typ",
   glossary-entries: (
     (
-      key: "tdoc",
-      short: "tdoc",
-      description: [
-        My personal Typst documentation template.
-        #link("https://github.com/black-desk/tdoc")[Github repository]
-      ],
-    ),
-    (
       key: "kouhu",
       short: "kouhu",
       description: [
-        #link("https://typst.app/universe/package/kouhu")[Typst Universe]
+        #link("https://typst.app/universe/package/kouhu")
       ]
     ),
     (
       key: "suiji",
       short: "suiji",
       description: [
-        #link("https://typst.app/universe/package/suiji")[Typst Universe]
+        #link("https://typst.app/universe/package/suiji")
       ]
     )
   )
