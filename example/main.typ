@@ -25,13 +25,6 @@
         #link("https://typst.app/universe/package/kouhu")
       ]
     ),
-    (
-      key: "suiji",
-      short: "suiji",
-      description: [
-        #link("https://typst.app/universe/package/suiji")
-      ]
-    )
   )
 )
 
