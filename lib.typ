@@ -7,6 +7,7 @@
   authors: (),
   createdAt: datetime.today(),
   abstract: [],
+  glossary-entries: (),
 ) = it => {
   import "@preview/cjk-unbreak:0.2.0": remove-cjk-break-space
   show: remove-cjk-break-space
@@ -82,6 +83,10 @@
   align(right, [
     最后更新于：#datetime.today().display()
   ])
+  
+  import "@preview/glossarium:0.5.9": make-glossary, register-glossary, print-glossary
+  show: make-glossary
+  register-glossary(glossary-entries)
 
   line(length: 100%)
 
@@ -92,4 +97,12 @@
   line(length: 100%)
 
   it
+
+  [
+    = 术语表
+
+    #print-glossary(
+     glossary-entries
+    )
+  ]
 }
