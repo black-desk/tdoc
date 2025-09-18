@@ -83,9 +83,9 @@
   ])
 
   align(right, [
-    最后更新于：#datetime.today().display()
+    构建于：#datetime.today().display()
   ])
-  
+
   import "@preview/glossarium:0.5.9": make-glossary, register-glossary, print-glossary
   show: make-glossary
   register-glossary(glossary-entries)
