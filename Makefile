@@ -40,4 +40,6 @@ install-data:
 	$(INSTALL_DATA) ./lib.typ $(tdocdir)/lib.typ
 	$(INSTALL_DATA) ./template/Makefile $(tdocdir)/template/Makefile
 	$(INSTALL_DATA) ./template/.gitignore $(tdocdir)/template/.gitignore
-	$(INSTALL_DATA) ./template/index.typ $(tdocdir)/template/index.typ
+	$(INSTALL_DATA) ./template/main.typ $(tdocdir)/template/main.typ
+	$(INSTALL_DATA) ./template/abstract.typ $(tdocdir)/template/abstract.typ
+	$(INSTALL_DATA) ./template/content.typ $(tdocdir)/template/content.typ

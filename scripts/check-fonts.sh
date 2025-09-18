@@ -59,7 +59,7 @@ function main() {
 		esac
 	done
 	shift $((OPTIND - 1))
-	
+
 	if ( typst fonts || true ) | grep -q \
 		-e "LXGW WenKai" \
 		-e "Noto Serif CJK SC" \

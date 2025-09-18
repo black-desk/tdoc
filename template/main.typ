@@ -3,9 +3,7 @@
 // SPDX-License-Identifier: MIT
 
 // NOTE:
-// Check https://github.com/black-desk/tdoc for
-// instructions on how to install this package
-// and build this documentation.
+// See https://github.com/black-desk/tdoc
 #import "@local/tdoc:0.1.0": document
 
 #show: document(
@@ -19,12 +17,22 @@
     ),
   ),
   createdAt: datetime.today(),
-  abstract: [
-    摘要
-  ]
+  abstract: include "abstract.typ",
+)
+
+#include "content.typ"
+
+#pdf.embed(
+  "main.typ",
+  relationship: "source",
 )
 
 #pdf.embed(
-  "index.typ",
+  "abstract.typ",
+  relationship: "source",
+)
+
+#pdf.embed(
+  "content.typ",
   relationship: "source",
 )

@@ -5,13 +5,16 @@
 .PHONY: all
 all: pdf
 
-ENTRY=index.typ
-SOURCES=$(ENTRY)
+ENTRY=main.typ
+SOURCES=\
+	$(ENTRY) \
+	abstract.typ \
+	content.typ
 
 .PHONY: pdf
-pdf: index.pdf
+pdf: main.pdf
 
-index.pdf: $(SOURCES)
+main.pdf: $(SOURCES)
 	typst compile $(ENTRY) --format pdf
 
 .PHONY: watch
