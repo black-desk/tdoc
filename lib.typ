@@ -100,7 +100,7 @@
 
   it
 
-  [
+  if glossary-entries.len() != 0 [
     = 术语表
 
     #print-glossary(
