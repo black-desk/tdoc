@@ -64,6 +64,10 @@
 
   set text(font: "Noto Serif CJK SC")
 
+  show figure: it => {
+    align(center)[#it]
+  }
+
   align(
     center,
     text(
