@@ -9,6 +9,8 @@
   abstract: [],
   glossary-entries: (),
 ) = it => {
+  set text(lang: "zh")
+
   import "@preview/cjk-unbreak:0.2.0": remove-cjk-break-space
   show: remove-cjk-break-space
 
