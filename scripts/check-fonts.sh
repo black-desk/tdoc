@@ -60,18 +60,20 @@ function main() {
 	done
 	shift $((OPTIND - 1))
 
-	if ( typst fonts || true ) | grep -q \
+	if (typst fonts || true) | grep -q \
 		-e "LXGW WenKai" \
 		-e "Noto Serif CJK SC" \
 		-e "Noto Sans CJK SC"; then
 		exit 0
 	fi
 
-	log "ERROR Some fonts are missing"
-	log "INFO tdoc need these fonts:"
-	log "INFO	LXGW WenKai"
-	log "INFO	Noto Serif CJK SC"
-	log "INFO	Noto Sans CJK SC"
+	log "[ERROR] Some fonts are missing"
+	log "[INFO] tdoc need these fonts:"
+	log "[INFO] LXGW WenKai: https://github.com/lxgw/LxgwWenKai/releases/tag/v1.520"
+	log "[INFO]   Download ttf"
+	log "[INFO] Noto Serif CJK SC: https://github.com/notofonts/noto-cjk/releases/tag/Serif2.003"
+	log "[INFO] Noto Sans CJK SC: https://github.com/notofonts/noto-cjk/releases/tag/Sans2.004"
+	log "[INFO]   Download Language Specific OTFs Simplified Chinese (简体中文)"
 
 	exit 1
 }
