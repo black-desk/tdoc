@@ -36,6 +36,7 @@ tdocdir = $(DESTDIR)$(datarootdir)/typst/packages/local/tdoc/$(VERSION)
 .PHONY: install-data
 install-data:
 	$(INSTALL) -d $(tdocdir)/template
+
 	$(INSTALL_DATA) ./typst.toml $(tdocdir)/typst.toml
 	$(INSTALL_DATA) ./lib.typ $(tdocdir)/lib.typ
 	$(INSTALL_DATA) ./template/Makefile $(tdocdir)/template/Makefile
@@ -45,3 +46,10 @@ install-data:
 	$(INSTALL_DATA) ./template/正文.typ $(tdocdir)/template/正文.typ
 	$(INSTALL_DATA) ./template/术语表.typ $(tdocdir)/template/术语表.typ
 	$(INSTALL_DATA) ./template/参考文献.bib $(tdocdir)/template/参考文献.bib
+
+.PHNOY: uninstall
+uninstall: uninstall-data
+
+.PHNOY: uninstall-data
+uninstall-data:
+	rm -r $(tdocdir)
