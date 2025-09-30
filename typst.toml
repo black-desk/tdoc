@@ -13,5 +13,5 @@ description = "自用Typst模板"
 
 [template]
 path = "template"
-entrypoint = "index.typ"
+entrypoint = "Typst文档模版.typ"
 thumbnail = "thumbnail.png"

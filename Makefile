@@ -40,6 +40,8 @@ install-data:
 	$(INSTALL_DATA) ./lib.typ $(tdocdir)/lib.typ
 	$(INSTALL_DATA) ./template/Makefile $(tdocdir)/template/Makefile
 	$(INSTALL_DATA) ./template/.gitignore $(tdocdir)/template/.gitignore
-	$(INSTALL_DATA) ./template/main.typ $(tdocdir)/template/main.typ
-	$(INSTALL_DATA) ./template/abstract.typ $(tdocdir)/template/abstract.typ
-	$(INSTALL_DATA) ./template/content.typ $(tdocdir)/template/content.typ
+	$(INSTALL_DATA) ./template/Typst文档模版.typ $(tdocdir)/template/Typst文档模版.typ
+	$(INSTALL_DATA) ./template/摘要.typ $(tdocdir)/template/摘要.typ
+	$(INSTALL_DATA) ./template/正文.typ $(tdocdir)/template/正文.typ
+	$(INSTALL_DATA) ./template/术语表.typ $(tdocdir)/template/术语表.typ
+	$(INSTALL_DATA) ./template/参考文献.bib $(tdocdir)/template/参考文献.bib

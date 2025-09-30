@@ -2,21 +2,21 @@
 #
 # SPDX-License-Identifier: MIT
 
+NAME=Typst文档模版
+ENTRY=$(NAME).typ
+PDF=$(NAME).pdf
+SOURCE_ZIP=$(NAME).zip
+
 .PHONY: all
-all: pdf
+all:
+	rm -f "$(SOURCE_ZIP)"
+	zip -r "$(SOURCE_ZIP)" . -x '*.pdf' '*.zip' '.*' '*/.*'
+	typst compile "$(ENTRY)"
 
-ENTRY=main.typ
-SOURCES=\
-	$(ENTRY) \
-	abstract.typ \
-	content.typ
-
-.PHONY: pdf
-pdf: main.pdf
-
-main.pdf: $(SOURCES)
-	typst compile $(ENTRY) --format pdf
+.PHONY: open
+open: all
+	xdg-open "$(PDF)" || open "$(PDF)" || true
 
 .PHONY: watch
-watch:
-	typst watch $(ENTRY)
+watch: open
+	typst watch "$(ENTRY)"
