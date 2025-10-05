@@ -46,6 +46,7 @@ install-data:
 	$(INSTALL_DATA) ./template/正文.typ $(tdocdir)/template/正文.typ
 	$(INSTALL_DATA) ./template/术语表.typ $(tdocdir)/template/术语表.typ
 	$(INSTALL_DATA) ./template/参考文献.bib $(tdocdir)/template/参考文献.bib
+	$(INSTALL_DATA) ./template/hello\ world.cpp $(tdocdir)/template/hello\ world.cpp
 
 .PHNOY: uninstall
 uninstall: uninstall-data
