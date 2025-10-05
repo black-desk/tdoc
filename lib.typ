@@ -6,7 +6,7 @@
   title,
   authors: (),
   createdAt: datetime.today(),
-  abstract: [],
+  abstract: none,
   glossary: (),
   references: none,
 ) = it => {
@@ -90,7 +90,9 @@
   show: make-glossary
   register-glossary(glossary)
 
-  line(length: 100%)
+  if abstract != none {
+    line(length: 100%)
+  }
 
   abstract
 
