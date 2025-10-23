@@ -24,10 +24,8 @@
       strong(title)
       h(1fr)
       hydra(1)
-      line(length: 100%)
     },
     footer: context {
-      line(length: 100%)
       align(
         center,
         counter(page).display(
