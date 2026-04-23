@@ -5,6 +5,3 @@
 [submodule ".format"]
 	path = .format
 	url = https://github.com/black-desk/.format
-[submodule ".prompts"]
-	path = .prompts
-	url = https://github.com/black-desk/.prompts
