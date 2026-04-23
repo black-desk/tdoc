@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: Chen Linxuan <me@black-desk.cn>
+#
+# SPDX-License-Identifier: MIT
+
+pdf-engine: typst
+toc: true
+variables:
+  mainfont: Noto Serif CJK SC
+  codefont: Maple Mono NF
+  section-numbering: 1.1.
+  lang: zh
+include-before-body:
+  - tdoc-include-before.typ
