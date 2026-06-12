@@ -4,21 +4,21 @@
 
 PREFIX ?= $(HOME)/.local
 
-DATADIR := $(PREFIX)/share/pandoc
+DATADIR := $(PREFIX)/share
 BINDIR := $(PREFIX)/bin
-DEFAULTSDIR := $(DATADIR)/defaults
+PANDOCDEFAULTSDIR := $(DATADIR)/pandoc/defaults
 
 .PHONY: all
 all:
 
 .PHONY: install
 install:
-	install -d $(DESTDIR)$(DEFAULTSDIR)
-	install -m 644 tdoc.yaml $(DESTDIR)$(DEFAULTSDIR)/tdoc.yaml
-	install -m 644 tdoc-include-before.typ $(DESTDIR)$(DEFAULTSDIR)/tdoc-include-before.typ
+	install -d $(DESTDIR)$(PANDOCDEFAULTSDIR)
+	install -m 644 tdoc.yaml $(DESTDIR)$(PANDOCDEFAULTSDIR)/tdoc.yaml
+	install -m 644 tdoc-include-before.typ $(DESTDIR)$(PANDOCDEFAULTSDIR)/tdoc-include-before.typ
 	install -m 755 tdoc $(DESTDIR)$(BINDIR)/tdoc
 
 .PHONY: uninstall
 uninstall:
-	rm $(DESTDIR)$(DEFAULTSDIR)/tdoc*
+	rm $(DESTDIR)$(PANDOCDEFAULTSDIR)/tdoc*
 	rm $(DESTDIR)$(BINDIR)/tdoc
