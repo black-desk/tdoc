@@ -31,5 +31,5 @@ make install
 ## 使用方法
 
 ```bash
-pandoc -d tdoc input.md -o output.pdf
+tdoc input.md -o output.pdf
 ```
