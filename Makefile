@@ -10,7 +10,6 @@ DEFAULTSDIR := $(DATADIR)/defaults
 
 .PHONY: all
 all:
-	@echo Nothing to do.
 
 .PHONY: install
 install:
