@@ -18,3 +18,9 @@
 ): set block(
   breakable: true,
 )
+
+// https://typst.app/docs/reference/model/table#parameters-stroke
+// Use default stroke (1pt + black)
+#set table(
+  stroke: 1pt + black,
+)
