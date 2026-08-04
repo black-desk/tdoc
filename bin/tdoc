@@ -1,0 +1,29 @@
+#!/bin/env bash
+
+# SPDX-FileCopyrightText: Chen Linxuan <me@black-desk.cn>
+#
+# SPDX-License-Identifier: MIT
+
+script_dir="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")" && pwd)"
+defaults_dir="$script_dir/../share/pandoc/defaults"
+include="$defaults_dir/tdoc-include-before.typ"
+
+output=""
+prev=""
+for arg in "$@"; do
+  case "$arg" in
+    --output=*) output="${arg#--output=}" ;;
+    -o?*)       output="${arg#-o}" ;;
+    *)          { [ "$prev" = "-o" ] || [ "$prev" = "--output" ]; } && output="$arg" ;;
+  esac
+  prev="$arg"
+done
+
+case "$output" in
+  *.pdf|*.typ)
+    exec pandoc -d "$defaults_dir/tdoc.yaml" --include-before-body="$include" "$@"
+    ;;
+  *)
+    exec pandoc -d "$defaults_dir/tdoc.yaml" "$@"
+    ;;
+esac

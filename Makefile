@@ -23,11 +23,14 @@ check:
 .PHONY: install
 install: check
 	install -d $(DESTDIR)$(PANDOCDEFAULTSDIR)
-	install -m 644 tdoc.yaml $(DESTDIR)$(PANDOCDEFAULTSDIR)/tdoc.yaml
-	install -m 644 tdoc-include-before.typ $(DESTDIR)$(PANDOCDEFAULTSDIR)/tdoc-include-before.typ
-	install -m 755 tdoc $(DESTDIR)$(BINDIR)/tdoc
+	install -d $(DESTDIR)$(BINDIR)
+	install -m 644 share/pandoc/defaults/tdoc.yaml $(DESTDIR)$(PANDOCDEFAULTSDIR)/tdoc.yaml
+	install -m 644 share/pandoc/defaults/tdoc-include-before.typ $(DESTDIR)$(PANDOCDEFAULTSDIR)/tdoc-include-before.typ
+	install -m 644 share/pandoc/defaults/reference.docx $(DESTDIR)$(PANDOCDEFAULTSDIR)/reference.docx
+	install -m 755 bin/tdoc $(DESTDIR)$(BINDIR)/tdoc
 
 .PHONY: uninstall
 uninstall:
 	rm $(DESTDIR)$(PANDOCDEFAULTSDIR)/tdoc*
+	rm $(DESTDIR)$(PANDOCDEFAULTSDIR)/reference.docx
 	rm $(DESTDIR)$(BINDIR)/tdoc
