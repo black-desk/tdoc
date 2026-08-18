@@ -4,6 +4,7 @@
 
 pdf-engine: typst
 toc: true
+shift-heading-level-by: -1
 variables:
   mainfont: Noto Serif CJK SC
   codefont: Maple Mono NF
