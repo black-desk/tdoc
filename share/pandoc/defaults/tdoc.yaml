@@ -4,7 +4,6 @@
 
 pdf-engine: typst
 toc: true
-reference-doc: ${.}/reference.docx
 variables:
   mainfont: Noto Serif CJK SC
   codefont: Maple Mono NF

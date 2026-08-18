@@ -26,7 +26,7 @@ install: check
 	install -d $(DESTDIR)$(BINDIR)
 	install -m 644 share/pandoc/defaults/tdoc.yaml $(DESTDIR)$(PANDOCDEFAULTSDIR)/tdoc.yaml
 	install -m 644 share/pandoc/defaults/tdoc-include-before.typ $(DESTDIR)$(PANDOCDEFAULTSDIR)/tdoc-include-before.typ
-	install -m 644 share/pandoc/defaults/reference.docx $(DESTDIR)$(PANDOCDEFAULTSDIR)/reference.docx
+	install -m 644 share/pandoc/defaults/tdoc-reference.docx $(DESTDIR)$(PANDOCDEFAULTSDIR)/tdoc-reference.docx
 	install -m 755 bin/tdoc $(DESTDIR)$(BINDIR)/tdoc
 
 .PHONY: uninstall

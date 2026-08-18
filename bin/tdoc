@@ -7,6 +7,7 @@
 script_dir="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")" && pwd)"
 defaults_dir="$script_dir/../share/pandoc/defaults"
 include="$defaults_dir/tdoc-include-before.typ"
+reference_doc="$defaults_dir/tdoc-reference.docx"
 
 output=""
 prev=""
@@ -22,6 +23,9 @@ done
 case "$output" in
   *.pdf|*.typ)
     exec pandoc -d "$defaults_dir/tdoc.yaml" --include-before-body="$include" "$@"
+    ;;
+  *.docx)
+    exec pandoc -d "$defaults_dir/tdoc.yaml" --reference-doc="$reference_doc" "$@"
     ;;
   *)
     exec pandoc -d "$defaults_dir/tdoc.yaml" "$@"
