@@ -25,7 +25,7 @@ case "$output" in
     exec pandoc -d "$defaults_dir/tdoc.yaml" --include-before-body="$include" "$@"
     ;;
   *.docx)
-    exec pandoc -d "$defaults_dir/tdoc.yaml" --reference-doc="$reference_doc" "$@"
+    exec pandoc -d "$defaults_dir/tdoc.yaml" --metadata=toc-title:目录 --reference-doc="$reference_doc" "$@"
     ;;
   *)
     exec pandoc -d "$defaults_dir/tdoc.yaml" "$@"
