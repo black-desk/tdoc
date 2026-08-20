@@ -1,16 +1,10 @@
----
-title: tdoc使用文档
-author: black_desk
-date: 2026-04-23
----
+# tdoc
 
 <!--
 SPDX-FileCopyrightText: Chen Linxuan <me@black-desk.cn>
 
 SPDX-License-Identifier: MIT
 -->
-
-# tdoc
 
 Pandoc 模板项目，用于将 GFM (GitHub Flavored
 Markdown) 通过 Typst 转换为 PDF，同时支持输出 Docx。
